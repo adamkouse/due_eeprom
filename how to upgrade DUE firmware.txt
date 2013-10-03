@@ -1,0 +1,11 @@
+Have to have LUFA 100807
+
+Need these packages:
+sudo apt-get install avr-libc binutils-avr gcc-avr
+
+Instructions on upgrading DUE firmware:
+http://arduino.cc/en/Hacking/Upgrading16U2Due
+
+This will flash your 16U2
+sudo ./avrdude -C avrdude.conf -c arduino -P /dev/ttyACM0 -b 19200 -p m16u2 -vvv -U flash:w:/home/m3741/warez/LUFA\ 100807/Projects/arduino-usbserial/Arduino-usbserial.hex:i
+
